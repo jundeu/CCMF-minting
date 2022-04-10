@@ -1,4 +1,4 @@
-const CONTRACTADDRESS  = "0x5aed692f8b28b5779961d85e047d733c1865ae0a";
+const CONTRACTADDRESS  = "0xd23Bb28e4869dFB9AB6736a2BfeCFBde3D6635E1";
 const ABI = [
 	{
 		"constant": true,
