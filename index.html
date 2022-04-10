@@ -5,9 +5,27 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>JoCoding Club Minitng</title>
+	<title>CCMF OFFICIAL NFT MINTING</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+	<style>
+		*{
+			font-family: 'Jua', sans-serif;
+			letter-spacing: 1.5px;
+		}
+	</style>
 	<script src="config.js"></script>
 	<script src="mintScript.js"></script>
+	<style>
+		body {
+			background-image: url(back.jpg);
+			background-repeat: repeat;
+			background-size : contain ;
+			text-align: center; }
+		
+	</style>
+	
 </head>
 
 <body>
@@ -16,8 +34,9 @@
 	<p id="mintStartBlockNumber">민팅 시작 블록: #00000000</p>
 	<p id="mintPrice">민팅 가격: 0 KLAY</p>
 	<p id="mintLimitPerBlock">트랜잭션당 최대 수량: 0개</p>
-	<a href="https://scope.klaytn.com/">현재 블록넘버 확인하기1(Klaytnscope)</a><br>
-	<a href="https://klayswap.com/">현재 블록넘버 확인하기2(Klayswap)</a><br>
+	<a href="https://scope.klaytn.com/">현재 블록넘버 확인하기(Klaytnscope)</a><br>
+	<a href="https://klayswap.com/">현재 블록넘버 확인하기(Klayswap)</a><br>
+	<a href="https://scope.klaytn.com/account/0x1b4c9994b8554ccde51c275e8c964ef889650d3c?tabId=txList">컨트랙트 주소 확인(Klaytnscope)</a><br>
 	<hr/>
 	<h2>MY WALLET</h2>
 	<button onclick="connect()">카이카스 지갑연결</button>
@@ -25,12 +44,13 @@
 	<p id="myKlay">잔액: 연결되지 않음</p>
 	<hr/>
 	<h2>MINT</h2>
+	<img src="NFT gif.gif" style="width: 300px;height: 168.75;">
 	<p id="mintCnt">0 / 0</p>
 	<label for="amount">민팅 수량</label>
 	<input type="number" id="amount" name="amount" min="1" max="3" value="1">
 	<button onclick="publicMint()">민팅</button>
 	<hr/>
-	<footer style="text-align: center;">Copyright &copy; 2022 <a href="https://cafe.naver.com/ccmf">CCMF</a> All rights reserved</footer>
+	<footer style="text-align: center;">Copyright &copy; 2022 <a href="https://cafe.naver.com/ccmf" target="_blank">CCMF</a> All rights reserved</footer>
 	<script>
 		document.addEventListener("DOMContentLoaded", async function (event) {
 			const accounts = await klaytn.enable();
@@ -39,7 +59,8 @@
 			}
 			check_status();
 		});
-	</script>
+	</script><br>
+	<a href="https://cafe.naver.com/ccmf" target="_blank"><img src="logo.jpg" style="width: 300px;height: 168.75;"></a> 
 </body>
 
 </html>
