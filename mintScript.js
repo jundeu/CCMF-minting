@@ -85,7 +85,7 @@ async function publicMint() {
         alert("아직 민팅이 시작되지 않았습니다.");
         return;
     }
-    const total_value = amount * mintPrice;
+    const total_value = BigNumber(amount * mintPrice);
 
     let estmated_gas;
 
@@ -104,22 +104,6 @@ async function publicMint() {
                     gas: estmated_gas,
                     value: total_value
                 })
-                .on("transactionHash", (txid) => {
-                    console.log(txid);
-                })
-                .once("allEvents", (allEvents) => {
-                    console.log(allEvents);
-                })
-                .once("Transfer", (transferEvent) => {
-                    console.log(transferEvent);
-                })
-                .once("receipt", (receipt) => {
-                    alert("민팅에 성공하였습니다.");
-                })
-                .on("error", (error) => {
-                    alert("민팅에 실패하였습니다.");
-                    console.log(error);
-                });
         })
         .catch(function (error) {
             console.log(error);
